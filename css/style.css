@@ -1,0 +1,44 @@
+/* D4E7C5 claro */
+/* 99BC85 escuro */
+
+body,html{
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    width: 200;
+    height: 200vh;
+    position: relative;
+    background-color: #EED3D9;
+}
+
+#tabuleiro {
+    width: 1800px;
+    height: 1800px;
+    position: absolute;
+    top: 90px;
+    left: 30%;
+    border: 1px solid #99BC85;
+}
+.linhas {
+    width: 100%;
+    display: flex;
+}
+
+.h1 {
+    width: 225px;
+    height: 225px;
+}
+
+.escuro{
+    background-color: #99BC85;
+}
+.claro{
+    background-color: #D4E7C5;
+}
+
+img{
+    width: 100%;
+    align-items: center;
+}
