@@ -1,21 +1,46 @@
-let peçaSelecionada = null;
+const peoesAmarelos = document.querySelectorAll('.peaoAmarelo');
 
-const casas = document.querySelectorAll('#tabuleiro .h1');
+peoesAmarelos.forEach(peao => {
+    let passosA = 0;
 
-casas.forEach(casa => {
-    casa.addEventListener('click', () => {
-        const imgNaCasa = casa.querySelector('img');
-        if (peçaSelecionada === null && imgNaCasa && imgNaCasa.classList.contains('peaoAmarelo')) {
-            peçaSelecionada = imgNaCasa;
-            peçaSelecionada.style.outline = '4px solid red';
-        } 
- 
-        else if (peçaSelecionada) {
-            if (!casa.querySelector('img')) {
-                casa.appendChild(peçaSelecionada);
-            }
-            peçaSelecionada.style.outline = '';
-            peçaSelecionada = null;
-        }
+    peao.addEventListener('click', () => {
+        if (passosA >= 2) return;
+
+        passosA++;
+        peao.style.position = 'relative';
+        peao.style.top = (225 * passosA) + 'px';
     });
 });
+
+
+const peoesRosas = document.querySelectorAll('.peaoRosa');
+
+peoesRosas.forEach(peao => {
+    let passosR = 0;
+
+    peao.addEventListener('click', () => {
+        if (passosR >= 2) return;
+
+        passosR++;
+        peao.style.position = 'relative';
+        peao.style.top = (-225 * passosR) + 'px';
+    });
+});
+
+
+const torresAmarelos = document.querySelectorAll('.torreAmarelo');
+    let passosTA = 0;
+
+
+torresAmarelos.forEach(torre => {
+    
+
+    torre.addEventListener('click', () => {
+        if (passosTA >= 7) return;
+
+        passosTA++;
+        torre.style.position = 'relative';
+        torre.style.top = (225 * passosTA) + 'px';
+    });
+});
+

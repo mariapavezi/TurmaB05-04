@@ -7,8 +7,8 @@ body,html{
 }
 
 main{
-    width: 200;
-    height: 200vh;
+    width: 100;
+    height: 100vh;
     position: relative;
     background-color: #EED3D9;
 }
@@ -41,4 +41,8 @@ main{
 img{
     width: 100%;
     align-items: center;
+}
+
+.peaoAmarelo , .peaoRosa{
+    cursor: pointer;
 }
